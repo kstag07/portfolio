@@ -2754,3 +2754,378 @@ Processing by PostsController#index as HTML
   [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
 Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms)
   [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (13.0ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-09 07:01:22', '2014-05-09 07:01:22', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-09 07:01:22', '2014-05-09 07:01:22', 393743796)
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 360ms (Views: 359.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------
+CanAccessHome Feature Test: test_0001_the test is sound
+-------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-05-09 00:01:22 -0700
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 27ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------------
+CheckforZurb Feature Test: test_0001_zurb foundation loading on root path
+-------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-05-09 00:01:23 -0700
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------------------
+Creating A Post Feature Test: test_0001_submit form to create a new post
+------------------------------------------------------------------------
+Started GET "/posts/new" for 127.0.0.1 at 2014-05-09 00:01:23 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (66.6ms)
+Completed 200 OK in 97ms (Views: 95.7ms | ActiveRecord: 0.0ms)
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+Started POST "/posts" for 127.0.0.1 at 2014-05-09 00:01:23 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"My first Post", "body"=>"This is my first post about how I learn web development"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-09 07:01:23.174612"], ["title", "My first Post"], ["updated_at", "2014-05-09 07:01:23.174612"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/posts/822229646
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-09 00:01:23 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229646]]
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+Deleting A Post Feature Test: test_0001_post is deleted with a click
+--------------------------------------------------------------------
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229645]]
+Started GET "/posts" for 127.0.0.1 at 2014-05-09 00:01:23 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 18ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+Started DELETE "/posts/822229645" for 127.0.0.1 at 2014-05-09 00:01:23 -0700
+Processing by PostsController#destroy as HTML
+  Parameters: {"id"=>"822229645"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229645]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 822229645]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/posts" for 127.0.0.1 at 2014-05-09 00:01:23 -0700
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------------
+Editing A Post Feature Test: test_0001_submit updates to an existing post
+-------------------------------------------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-09 07:01:23.260654"], ["title", "My first Post"], ["updated_at", "2014-05-09 07:01:23.260654"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-09 00:01:23 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229646]]
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+Started GET "/posts/822229646/edit" for 127.0.0.1 at 2014-05-09 00:01:23 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+  Rendered posts/_form.html.erb (2.8ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 393743796]]
+Started PATCH "/posts/822229646" for 127.0.0.1 at 2014-05-09 00:01:23 -0700
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Intro to HTTP", "body"=>"\nThis is my first post about how I learn web development"}, "commit"=>"Update Post", "id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  UPDATE "posts" SET "body" = ?, "title" = ?, "updated_at" = ? WHERE "posts"."id" = 822229646  [["body", "\nThis is my first post about how I learn web development"], ["title", "Intro to HTTP"], ["updated_at", "2014-05-09 07:01:23.289829"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/822229646
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-09 00:01:23 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------------------------
+Visiting The Post Index Feature Test: test_0001_with existing posts, show list
+------------------------------------------------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-09 07:01:23.315146"], ["title", "My first Post"], ["updated_at", "2014-05-09 07:01:23.315146"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts" for 127.0.0.1 at 2014-05-09 00:01:23 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-09 07:03:19', '2014-05-09 07:03:19', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-09 07:03:19', '2014-05-09 07:03:19', 393743796)
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 74ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------
+CanAccessHome Feature Test: test_0001_the test is sound
+-------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-05-09 00:03:19 -0700
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 19ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------------
+CheckforZurb Feature Test: test_0001_zurb foundation loading on root path
+-------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-05-09 00:03:19 -0700
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------------------
+Creating A Post Feature Test: test_0001_submit form to create a new post
+------------------------------------------------------------------------
+Started GET "/posts/new" for 127.0.0.1 at 2014-05-09 00:03:19 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (29.6ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+Started POST "/posts" for 127.0.0.1 at 2014-05-09 00:03:19 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"My first Post", "body"=>"This is my first post about how I learn web development"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-09 07:03:19.412124"], ["title", "My first Post"], ["updated_at", "2014-05-09 07:03:19.412124"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/posts/822229646
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-09 00:03:19 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229646]]
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+Deleting A Post Feature Test: test_0001_post is deleted with a click
+--------------------------------------------------------------------
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229645]]
+Started GET "/posts" for 127.0.0.1 at 2014-05-09 00:03:19 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+Started DELETE "/posts/822229645" for 127.0.0.1 at 2014-05-09 00:03:19 -0700
+Processing by PostsController#destroy as HTML
+  Parameters: {"id"=>"822229645"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229645]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 822229645]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+Started GET "/posts" for 127.0.0.1 at 2014-05-09 00:03:19 -0700
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------------
+Editing A Post Feature Test: test_0001_submit updates to an existing post
+-------------------------------------------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-09 07:03:19.488795"], ["title", "My first Post"], ["updated_at", "2014-05-09 07:03:19.488795"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-09 00:03:19 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229646]]
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+Started GET "/posts/822229646/edit" for 127.0.0.1 at 2014-05-09 00:03:19 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+  Rendered posts/_form.html.erb (2.9ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.1ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 393743796]]
+Started PATCH "/posts/822229646" for 127.0.0.1 at 2014-05-09 00:03:19 -0700
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Intro to HTTP", "body"=>"\nThis is my first post about how I learn web development"}, "commit"=>"Update Post", "id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  UPDATE "posts" SET "body" = ?, "title" = ?, "updated_at" = ? WHERE "posts"."id" = 822229646  [["body", "\nThis is my first post about how I learn web development"], ["title", "Intro to HTTP"], ["updated_at", "2014-05-09 07:03:19.517281"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/822229646
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-09 00:03:19 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------------------------
+Visiting The Post Index Feature Test: test_0001_with existing posts, show list
+------------------------------------------------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-09 07:03:19.543747"], ["title", "My first Post"], ["updated_at", "2014-05-09 07:03:19.543747"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts" for 127.0.0.1 at 2014-05-09 00:03:19 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (34.2ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-09 17:35:21', '2014-05-09 17:35:21', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-09 17:35:21', '2014-05-09 17:35:21', 393743796)
+  [1m[36m (24.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 605ms (Views: 604.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------
+CanAccessHome Feature Test: test_0001_the test is sound
+-------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-05-09 10:35:22 -0700
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 46ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------------
+CheckforZurb Feature Test: test_0001_zurb foundation loading on root path
+-------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-05-09 10:35:22 -0700
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------------------
+Creating A Post Feature Test: test_0001_submit form to create a new post
+------------------------------------------------------------------------
+Started GET "/posts/new" for 127.0.0.1 at 2014-05-09 10:35:22 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (88.8ms)
+Completed 200 OK in 119ms (Views: 118.2ms | ActiveRecord: 0.0ms)
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+Started POST "/posts" for 127.0.0.1 at 2014-05-09 10:35:22 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"My first Post", "body"=>"This is my first post about how I learn web development"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-09 17:35:22.853845"], ["title", "My first Post"], ["updated_at", "2014-05-09 17:35:22.853845"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/posts/822229646
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-09 10:35:22 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229646]]
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+Deleting A Post Feature Test: test_0001_post is deleted with a click
+--------------------------------------------------------------------
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229645]]
+Started GET "/posts" for 127.0.0.1 at 2014-05-09 10:35:22 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+Started DELETE "/posts/822229645" for 127.0.0.1 at 2014-05-09 10:35:22 -0700
+Processing by PostsController#destroy as HTML
+  Parameters: {"id"=>"822229645"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229645]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 822229645]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/posts" for 127.0.0.1 at 2014-05-09 10:35:22 -0700
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------------
+Editing A Post Feature Test: test_0001_submit updates to an existing post
+-------------------------------------------------------------------------
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-09 17:35:22.931656"], ["title", "My first Post"], ["updated_at", "2014-05-09 17:35:22.931656"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-09 10:35:22 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229646]]
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+Started GET "/posts/822229646/edit" for 127.0.0.1 at 2014-05-09 10:35:22 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+  Rendered posts/_form.html.erb (2.9ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 393743796]]
+Started PATCH "/posts/822229646" for 127.0.0.1 at 2014-05-09 10:35:22 -0700
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Intro to HTTP", "body"=>"\nThis is my first post about how I learn web development"}, "commit"=>"Update Post", "id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  UPDATE "posts" SET "body" = ?, "title" = ?, "updated_at" = ? WHERE "posts"."id" = 822229646  [["body", "\nThis is my first post about how I learn web development"], ["title", "Intro to HTTP"], ["updated_at", "2014-05-09 17:35:22.960515"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/822229646
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-09 10:35:22 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------------------------
+Visiting The Post Index Feature Test: test_0001_with existing posts, show list
+------------------------------------------------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-09 17:35:22.985587"], ["title", "My first Post"], ["updated_at", "2014-05-09 17:35:22.985587"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts" for 127.0.0.1 at 2014-05-09 10:35:22 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.9ms)[0m  rollback transaction

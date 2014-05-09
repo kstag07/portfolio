@@ -45,7 +45,7 @@ group :production do
 end
 # Use unicorn as the app server
 # gem 'unicorn'
-gem 'travis-lint'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
