@@ -3129,3 +3129,669 @@ Processing by PostsController#index as HTML
   [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
 Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.1ms)
   [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (17.6ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 20:26:56', '2014-05-12 20:26:56', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 20:26:56', '2014-05-12 20:26:56', 393743796)
+  [1m[36m (11.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------------------------
+Projects::CreatingAProject Feature Test: test_0001_The newly added Project should be created
+--------------------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 20:28:25', '2014-05-12 20:28:25', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 20:28:25', '2014-05-12 20:28:25', 393743796)
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 20:30:31', '2014-05-12 20:30:31', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 20:30:31', '2014-05-12 20:30:31', 393743796)
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 13:30:31 -0700
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 20:36:05', '2014-05-12 20:36:05', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 20:36:05', '2014-05-12 20:36:05', 393743796)
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 13:36:05 -0700
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 20:36:56', '2014-05-12 20:36:56', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 20:36:56', '2014-05-12 20:36:56', 393743796)
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 13:36:56 -0700
+Processing by ProjectsController#index as HTML
+Completed 500 Internal Server Error in 94ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 20:41:39', '2014-05-12 20:41:39', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 20:41:39', '2014-05-12 20:41:39', 393743796)
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 13:41:39 -0700
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 90ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 20:43:13', '2014-05-12 20:43:13', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 20:43:13', '2014-05-12 20:43:13', 393743796)
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 13:43:13 -0700
+Processing by ProjectsController#index as HTML
+Completed 500 Internal Server Error in 51ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.1ms)[0m  DROP TABLE "posts"
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProjects (20140512204410)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "technologies_used" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (11.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140512204410"]]
+  [1m[36m (18.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (18.0ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 20:48:05', '2014-05-12 20:48:05', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 20:48:05', '2014-05-12 20:48:05', 393743796)
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 13:48:05 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 359ms (Views: 322.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 20:52:28', '2014-05-12 20:52:28', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 20:52:28', '2014-05-12 20:52:28', 393743796)
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 13:52:28 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 344ms (Views: 311.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 20:52:42', '2014-05-12 20:52:42', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 20:52:42', '2014-05-12 20:52:42', 393743796)
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 13:52:42 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 158ms (Views: 139.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 20:54:33', '2014-05-12 20:54:33', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 20:54:33', '2014-05-12 20:54:33', 393743796)
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 20:54:48', '2014-05-12 20:54:48', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 20:54:48', '2014-05-12 20:54:48', 393743796)
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 13:54:48 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 147ms (Views: 129.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 20:55:26', '2014-05-12 20:55:26', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 20:55:26', '2014-05-12 20:55:26', 393743796)
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 13:55:26 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 97ms (Views: 79.6ms | ActiveRecord: 0.2ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 13:55:26 -0700
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (14.5ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 20:59:56', '2014-05-12 20:59:56', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 20:59:56', '2014-05-12 20:59:56', 393743796)
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 13:59:56 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 337ms (Views: 306.2ms | ActiveRecord: 0.2ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 13:59:56 -0700
+Processing by ProjectsController#new as HTML
+Completed 500 Internal Server Error in 22ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 21:02:44', '2014-05-12 21:02:44', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 21:02:44', '2014-05-12 21:02:44', 393743796)
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 14:02:44 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 315ms (Views: 283.7ms | ActiveRecord: 0.3ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 14:02:44 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.html.erb within layouts/application (22.7ms)
+Completed 500 Internal Server Error in 38ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 21:04:11', '2014-05-12 21:04:11', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 21:04:11', '2014-05-12 21:04:11', 393743796)
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 326ms (Views: 325.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------
+CanAccessHome Feature Test: test_0001_the test is sound
+-------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 33ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------------
+CheckforZurb Feature Test: test_0001_zurb foundation loading on root path
+-------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------------------
+Creating A Post Feature Test: test_0001_submit form to create a new post
+------------------------------------------------------------------------
+Started GET "/posts/new" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (88.9ms)
+Completed 200 OK in 130ms (Views: 129.3ms | ActiveRecord: 0.0ms)
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+Started POST "/posts" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"My first Post", "body"=>"This is my first post about how I learn web development"}, "commit"=>"Create Post"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-12 21:04:12.380562"], ["title", "My first Post"], ["updated_at", "2014-05-12 21:04:12.380562"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/posts/822229646
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229646]]
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+Deleting A Post Feature Test: test_0001_post is deleted with a click
+--------------------------------------------------------------------
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229645]]
+Started GET "/posts" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+Started DELETE "/posts/822229645" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by PostsController#destroy as HTML
+  Parameters: {"id"=>"822229645"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229645]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 822229645]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/posts" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------------
+Editing A Post Feature Test: test_0001_submit updates to an existing post
+-------------------------------------------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-12 21:04:12.478049"], ["title", "My first Post"], ["updated_at", "2014-05-12 21:04:12.478049"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229646]]
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+Started GET "/posts/822229646/edit" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+  Rendered posts/_form.html.erb (2.9ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 393743796]]
+Started PATCH "/posts/822229646" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Intro to HTTP", "body"=>"\nThis is my first post about how I learn web development"}, "commit"=>"Update Post", "id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  UPDATE "posts" SET "body" = ?, "title" = ?, "updated_at" = ? WHERE "posts"."id" = 822229646  [["body", "\nThis is my first post about how I learn web development"], ["title", "Intro to HTTP"], ["updated_at", "2014-05-12 21:04:12.508473"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/822229646
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------------------------
+Visiting The Post Index Feature Test: test_0001_with existing posts, show list
+------------------------------------------------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-12 21:04:12.532985"], ["title", "My first Post"], ["updated_at", "2014-05-12 21:04:12.532985"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects"
+Completed 200 OK in 21ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 14:04:12 -0700
+Processing by ProjectsController#new as HTML
+Completed 500 Internal Server Error in 21ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 21:08:56', '2014-05-12 21:08:56', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 21:08:56', '2014-05-12 21:08:56', 393743796)
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 14:08:56 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 97ms (Views: 80.5ms | ActiveRecord: 0.3ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 14:08:56 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 10ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 21:10:24', '2014-05-12 21:10:24', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 21:10:24', '2014-05-12 21:10:24', 393743796)
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 14:10:24 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 98ms (Views: 80.7ms | ActiveRecord: 0.2ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 14:10:24 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 21:13:11', '2014-05-12 21:13:11', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 21:13:11', '2014-05-12 21:13:11', 393743796)
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 14:13:11 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 102ms (Views: 85.9ms | ActiveRecord: 0.2ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 14:13:11 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+Started POST "/projects" for 127.0.0.1 at 2014-05-12 14:13:11 -0700
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 21:13:53', '2014-05-12 21:13:53', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 21:13:53', '2014-05-12 21:13:53', 393743796)
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 14:13:53 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 95ms (Views: 78.3ms | ActiveRecord: 0.2ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 14:13:53 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+Started POST "/projects" for 127.0.0.1 at 2014-05-12 14:13:54 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"Code Fellows Portfolio", "technologies_used"=>"Ruby, Rails, Foundation, html, css"}, "commit"=>"Create Project"}
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 21:15:44', '2014-05-12 21:15:44', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 21:15:44', '2014-05-12 21:15:44', 393743796)
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 14:15:44 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 96ms (Views: 78.6ms | ActiveRecord: 0.2ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 14:15:44 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.3ms)
+Started POST "/projects" for 127.0.0.1 at 2014-05-12 14:15:44 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"Code Fellows Portfolio", "technologies_used"=>"Ruby, Rails, Foundation, html, css"}, "commit"=>"Create Project"}
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 21:22:57', '2014-05-12 21:22:57', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 21:22:57', '2014-05-12 21:22:57', 393743796)
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 14:22:57 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 99ms (Views: 81.7ms | ActiveRecord: 0.2ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 14:22:57 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.3ms)
+Started POST "/projects" for 127.0.0.1 at 2014-05-12 14:22:57 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"Code Fellows Portfolio", "technologies_used"=>"Ruby, Rails, Foundation, html, css"}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "projects" ("created_at", "name", "technologies_used", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-05-12 21:22:57.374871"], ["name", "Code Fellows Portfolio"], ["technologies_used", "Ruby, Rails, Foundation, html, css"], ["updated_at", "2014-05-12 21:22:57.374871"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/projects/1
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+Started GET "/projects/1" for 127.0.0.1 at 2014-05-12 14:22:57 -0700
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 21:24:54', '2014-05-12 21:24:54', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 21:24:54', '2014-05-12 21:24:54', 393743796)
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 14:24:54 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 96ms (Views: 78.9ms | ActiveRecord: 0.2ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 14:24:54 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.3ms)
+Started POST "/projects" for 127.0.0.1 at 2014-05-12 14:24:54 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"Code Fellows Portfolio", "technologies_used"=>"Ruby, Rails, Foundation, html, css"}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "projects" ("created_at", "name", "technologies_used", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-05-12 21:24:54.983937"], ["name", "Code Fellows Portfolio"], ["technologies_used", "Ruby, Rails, Foundation, html, css"], ["updated_at", "2014-05-12 21:24:54.983937"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/projects/1
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/projects/1" for 127.0.0.1 at 2014-05-12 14:24:54 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 5ms
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 21:27:22', '2014-05-12 21:27:22', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 21:27:22', '2014-05-12 21:27:22', 393743796)
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 14:27:22 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 95ms (Views: 78.6ms | ActiveRecord: 0.2ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 14:27:22 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.3ms)
+Started POST "/projects" for 127.0.0.1 at 2014-05-12 14:27:22 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"Code Fellows Portfolio", "technologies_used"=>"Ruby, Rails, Foundation, html, css"}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "projects" ("created_at", "name", "technologies_used", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-05-12 21:27:22.863177"], ["name", "Code Fellows Portfolio"], ["technologies_used", "Ruby, Rails, Foundation, html, css"], ["updated_at", "2014-05-12 21:27:22.863177"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/projects/1
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/projects/1" for 127.0.0.1 at 2014-05-12 14:27:22 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered projects/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 5ms
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 21:28:37', '2014-05-12 21:28:37', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 21:28:37', '2014-05-12 21:28:37', 393743796)
+  [1m[36m (22.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 14:28:38 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 95ms (Views: 78.5ms | ActiveRecord: 0.2ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 14:28:38 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.3ms)
+Started POST "/projects" for 127.0.0.1 at 2014-05-12 14:28:38 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"Code Fellows Portfolio", "technologies_used"=>"Ruby, Rails, Foundation, html, css"}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "projects" ("created_at", "name", "technologies_used", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-05-12 21:28:38.180557"], ["name", "Code Fellows Portfolio"], ["technologies_used", "Ruby, Rails, Foundation, html, css"], ["updated_at", "2014-05-12 21:28:38.180557"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/projects/1
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+Started GET "/projects/1" for 127.0.0.1 at 2014-05-12 14:28:38 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-12 21:43:08', '2014-05-12 21:43:08', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-12 21:43:08', '2014-05-12 21:43:08', 393743796)
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 14:43:08 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 97ms (Views: 79.6ms | ActiveRecord: 0.2ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 14:43:08 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.3ms)
+Started POST "/projects" for 127.0.0.1 at 2014-05-12 14:43:08 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"Code Fellows Portfolio", "technologies_used"=>"Ruby, Rails, Foundation, html, css"}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "projects" ("created_at", "name", "technologies_used", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-05-12 21:43:08.537370"], ["name", "Code Fellows Portfolio"], ["technologies_used", "Ruby, Rails, Foundation, html, css"], ["updated_at", "2014-05-12 21:43:08.537370"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/projects/1
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+Started GET "/projects/1" for 127.0.0.1 at 2014-05-12 14:43:08 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.7ms)[0m  rollback transaction

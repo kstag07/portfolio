@@ -10,7 +10,11 @@
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
-
+ <% flash.each do |key, value| %>
+        <div class="alert-box round <%= flash_class(key) %>">
+              <%= value %>
+        </div>
+  <% end %>
   <body>
 
     <%= yield %>
