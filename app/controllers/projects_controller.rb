@@ -7,7 +7,14 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
- before_action :set_project, only: [:show, :edit, :update]
+ before_action :set_project, only: [:show, :edit, :update, :destroy]
+
+ def destroy
+  @project.destroy
+    respond_to do |format|
+      format.html { redirect_to projects_url, notice: 'Post was successfully destroyed.' }
+    end
+ end
 
   def edit
 

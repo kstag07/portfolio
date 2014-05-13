@@ -4930,3 +4930,913 @@ Processing by ProjectsController#update as HTML
   Rendered projects/_form.html.erb (3.7ms)
 Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.2ms)
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:18:25', '2014-05-13 00:18:25', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:18:25', '2014-05-13 00:18:25', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:18:25', '2014-05-13 00:18:25', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:18:25', '2014-05-13 00:18:25', 888177411)[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------------------------------
+As the site visitor I wan to see a developer's portfolio Feature Test: test_0001_viewing all projects
+-----------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:18:25 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 106ms (Views: 90.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:26:37', '2014-05-13 00:26:37', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:26:37', '2014-05-13 00:26:37', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:26:38', '2014-05-13 00:26:38', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:26:38', '2014-05-13 00:26:38', 888177411)[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------------------------------------
+As the site visitor I want to see a developer's portfolio Feature Test: test_0001_viewing all projects
+------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:26:38 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 106ms (Views: 91.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:26:43', '2014-05-13 00:26:43', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:26:43', '2014-05-13 00:26:43', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:26:43', '2014-05-13 00:26:43', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:26:43', '2014-05-13 00:26:43', 888177411)[0m
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 74ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+CanAccessHome Feature Test: test_0001_the test is sound
+-------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 18ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------
+CheckforZurb Feature Test: test_0001_zurb foundation loading on root path
+-------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------
+Creating A Post Feature Test: test_0001_submit form to create a new post
+------------------------------------------------------------------------
+Started GET "/posts/new" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (30.8ms)
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229645]]
+Started POST "/posts" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"My first Post", "body"=>"This is my first post about how I learn web development"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-13 00:26:43.676418"], ["title", "My first Post"], ["updated_at", "2014-05-13 00:26:43.676418"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/822229646
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------
+Deleting A Post Feature Test: test_0001_post is deleted with a click
+--------------------------------------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+Started GET "/posts" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+Started DELETE "/posts/822229645" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by PostsController#destroy as HTML
+  Parameters: {"id"=>"822229645"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 822229645]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/posts
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/posts" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------
+Editing A Post Feature Test: test_0001_submit updates to an existing post
+-------------------------------------------------------------------------
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229645]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-13 00:26:43.742246"], ["title", "My first Post"], ["updated_at", "2014-05-13 00:26:43.742246"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+Started GET "/posts/822229646/edit" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229646]]
+  Rendered posts/_form.html.erb (2.8ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.1ms)
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 393743796]]
+Started PATCH "/posts/822229646" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Intro to HTTP", "body"=>"\nThis is my first post about how I learn web development"}, "commit"=>"Update Post", "id"=>"822229646"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229646]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.6ms)[0m  [1mUPDATE "posts" SET "body" = ?, "title" = ?, "updated_at" = ? WHERE "posts"."id" = 822229646[0m  [["body", "\nThis is my first post about how I learn web development"], ["title", "Intro to HTTP"], ["updated_at", "2014-05-13 00:26:43.770597"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/posts/822229646
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229646]]
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------------
+Visiting The Post Index Feature Test: test_0001_with existing posts, show list
+------------------------------------------------------------------------------
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229645]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-13 00:26:43.797058"], ["title", "My first Post"], ["updated_at", "2014-05-13 00:26:43.797058"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.3ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (3.7ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+Started POST "/projects" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"Code Fellows Portfolio", "technologies_used"=>"Ruby, Rails, Foundation, html, css"}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "projects" ("created_at", "name", "technologies_used", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-05-13 00:26:43.870103"], ["name", "Code Fellows Portfolio"], ["technologies_used", "Ruby, Rails, Foundation, html, css"], ["updated_at", "2014-05-13 00:26:43.870103"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/projects/888177412
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+Started GET "/projects/888177412" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"888177412"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 888177412]]
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0002_new project has invalid data
+---------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (2.5ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+Started POST "/projects" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"M", "technologies_used"=>""}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered projects/_form.html.erb (5.0ms)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+I want to edit a portfolio item so that I can update new project details Feature Test: test_0001_The portfolio item should be changed from existing item
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 703402084]]
+Started GET "/projects/703402084/edit" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"703402084"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 703402084]]
+  Rendered projects/_form.html.erb (4.0ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.1ms)
+Started PATCH "/projects/703402084" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"Kevin's Portfolio", "technologies_used"=>"\nRuby, Rails, Zurb"}, "commit"=>"Update Project", "id"=>"703402084"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 703402084]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "projects" SET "name" = ?, "technologies_used" = ?, "updated_at" = ? WHERE "projects"."id" = 703402084  [["name", "Kevin's Portfolio"], ["technologies_used", "\nRuby, Rails, Zurb"], ["updated_at", "2014-05-13 00:26:43.966374"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/projects/703402084
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/projects/703402084" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"703402084"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 703402084]]
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------
+I want to edit a portfolio item so that I can update new project details Feature Test: test_0002_incorrectly editing an existing project
+----------------------------------------------------------------------------------------------------------------------------------------
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 703402084]]
+Started GET "/projects/703402084/edit" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"703402084"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 703402084]]
+  Rendered projects/_form.html.erb (2.7ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms)
+Started PATCH "/projects/703402084" for 127.0.0.1 at 2014-05-12 17:26:43 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"Q", "technologies_used"=>"\nRuby, Rails, Zurb"}, "commit"=>"Update Project", "id"=>"703402084"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 703402084]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered projects/_form.html.erb (3.5ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------
+As a visitor when I click on the project I want to only show that project Feature Test: test_0001_showing a project
+-------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:26:44 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------------------------------------------------
+As the site visitor I want to see a developer's portfolio Feature Test: test_0001_viewing all projects
+------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:26:44 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:27:05', '2014-05-13 00:27:05', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:27:05', '2014-05-13 00:27:05', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:27:05', '2014-05-13 00:27:05', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:27:05', '2014-05-13 00:27:05', 888177411)[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 73ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+CanAccessHome Feature Test: test_0001_the test is sound
+-------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 18ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------
+CheckforZurb Feature Test: test_0001_zurb foundation loading on root path
+-------------------------------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------
+Creating A Post Feature Test: test_0001_submit form to create a new post
+------------------------------------------------------------------------
+Started GET "/posts/new" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (30.0ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229645]]
+Started POST "/posts" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"My first Post", "body"=>"This is my first post about how I learn web development"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-13 00:27:05.492543"], ["title", "My first Post"], ["updated_at", "2014-05-13 00:27:05.492543"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/822229646
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------
+Deleting A Post Feature Test: test_0001_post is deleted with a click
+--------------------------------------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+Started GET "/posts" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.1ms)
+Started DELETE "/posts/822229645" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by PostsController#destroy as HTML
+  Parameters: {"id"=>"822229645"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229645]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 822229645]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/posts
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/posts" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------
+Editing A Post Feature Test: test_0001_submit updates to an existing post
+-------------------------------------------------------------------------
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229645]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-13 00:27:05.562498"], ["title", "My first Post"], ["updated_at", "2014-05-13 00:27:05.562498"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229646]]
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+Started GET "/posts/822229646/edit" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229646]]
+  Rendered posts/_form.html.erb (2.9ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.1ms)
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 393743796]]
+Started PATCH "/posts/822229646" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Intro to HTTP", "body"=>"\nThis is my first post about how I learn web development"}, "commit"=>"Update Post", "id"=>"822229646"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229646]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.6ms)[0m  [1mUPDATE "posts" SET "body" = ?, "title" = ?, "updated_at" = ? WHERE "posts"."id" = 822229646[0m  [["body", "\nThis is my first post about how I learn web development"], ["title", "Intro to HTTP"], ["updated_at", "2014-05-13 00:27:05.592300"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/posts/822229646
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+Started GET "/posts/822229646" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"822229646"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 822229646]]
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------------
+Visiting The Post Index Feature Test: test_0001_with existing posts, show list
+------------------------------------------------------------------------------
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = ? LIMIT 1  [["id", 822229645]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["body", "This is my first post about how I learn web development"], ["created_at", "2014-05-13 00:27:05.618351"], ["title", "My first Post"], ["updated_at", "2014-05-13 00:27:05.618351"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0001_The newly added Project should be created
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (3.8ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+Started POST "/projects" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"Code Fellows Portfolio", "technologies_used"=>"Ruby, Rails, Foundation, html, css"}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "projects" ("created_at", "name", "technologies_used", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-05-13 00:27:05.690808"], ["name", "Code Fellows Portfolio"], ["technologies_used", "Ruby, Rails, Foundation, html, css"], ["updated_at", "2014-05-13 00:27:05.690808"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/projects/888177412
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+Started GET "/projects/888177412" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"888177412"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 888177412]]
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------------------------------------------------------------------------------
+As the site owner, I want to added a portfolio item so that I can show off my work Feature Test: test_0002_new project has invalid data
+---------------------------------------------------------------------------------------------------------------------------------------
+Started GET "/projects/new" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (2.5ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+Started POST "/projects" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"M", "technologies_used"=>""}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered projects/_form.html.erb (4.9ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+I want to edit a portfolio item so that I can update new project details Feature Test: test_0001_The portfolio item should be changed from existing item
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 703402084]]
+Started GET "/projects/703402084/edit" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"703402084"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 703402084]]
+  Rendered projects/_form.html.erb (4.0ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+Started PATCH "/projects/703402084" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"Kevin's Portfolio", "technologies_used"=>"\nRuby, Rails, Zurb"}, "commit"=>"Update Project", "id"=>"703402084"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 703402084]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "projects" SET "name" = ?, "technologies_used" = ?, "updated_at" = ? WHERE "projects"."id" = 703402084  [["name", "Kevin's Portfolio"], ["technologies_used", "\nRuby, Rails, Zurb"], ["updated_at", "2014-05-13 00:27:05.786777"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/projects/703402084
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/projects/703402084" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"703402084"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 703402084]]
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------------------------------------------------------------------
+I want to edit a portfolio item so that I can update new project details Feature Test: test_0002_incorrectly editing an existing project
+----------------------------------------------------------------------------------------------------------------------------------------
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 703402084]]
+Started GET "/projects/703402084/edit" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"703402084"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 703402084]]
+  Rendered projects/_form.html.erb (2.8ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms)
+Started PATCH "/projects/703402084" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"Q", "technologies_used"=>"\nRuby, Rails, Zurb"}, "commit"=>"Update Project", "id"=>"703402084"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 703402084]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered projects/_form.html.erb (3.7ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------
+As a visitor when I click on the project I want to only show that project Feature Test: test_0001_showing a project
+-------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------------------------------------------------
+As the site visitor I want to see a developer's portfolio Feature Test: test_0001_viewing all projects
+------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:27:05 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:28:28', '2014-05-13 00:28:28', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:28:28', '2014-05-13 00:28:28', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:28:28', '2014-05-13 00:28:28', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:28:28', '2014-05-13 00:28:28', 888177411)[0m
+  [1m[35m (177.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------------------------------------
+As the site visitor I want to see a developer's portfolio Feature Test: test_0001_viewing all projects
+------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:28:28 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 108ms (Views: 93.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:30:15', '2014-05-13 00:30:15', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:30:15', '2014-05-13 00:30:15', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:30:15', '2014-05-13 00:30:15', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:30:15', '2014-05-13 00:30:15', 888177411)[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------
+As a visitor when I click on the project I want to only show that project Feature Test: test_0001_showing a project
+-------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:30:15 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 95ms (Views: 79.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:34:47', '2014-05-13 00:34:47', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:34:47', '2014-05-13 00:34:47', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:34:47', '2014-05-13 00:34:47', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:34:47', '2014-05-13 00:34:47', 888177411)[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------
+As a visitor when I click on the project I want to only show that project Feature Test: test_0001_showing a project
+-------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:34:47 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 105ms (Views: 89.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:35:36', '2014-05-13 00:35:36', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:35:36', '2014-05-13 00:35:36', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:35:36', '2014-05-13 00:35:36', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:35:36', '2014-05-13 00:35:36', 888177411)[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------
+As a visitor when I click on the project I want to only show that project Feature Test: test_0001_showing a project
+-------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:35:36 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 106ms (Views: 89.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:35:58', '2014-05-13 00:35:58', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:35:58', '2014-05-13 00:35:58', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:35:58', '2014-05-13 00:35:58', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:35:58', '2014-05-13 00:35:58', 888177411)[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------
+As a visitor when I click on the project I want to only show that project Feature Test: test_0001_showing a project
+-------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:35:58 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 105ms (Views: 89.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:41:31', '2014-05-13 00:41:31', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:41:31', '2014-05-13 00:41:31', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:41:31', '2014-05-13 00:41:31', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:41:31', '2014-05-13 00:41:31', 888177411)[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------
+As a visitor when I click on the project I want to only show that project Feature Test: test_0001_showing a project
+-------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:41:31 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 107ms (Views: 90.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:42:32', '2014-05-13 00:42:32', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:42:32', '2014-05-13 00:42:32', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:42:32', '2014-05-13 00:42:32', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:42:32', '2014-05-13 00:42:32', 888177411)[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------
+As a visitor when I click on the project I want to only show that project Feature Test: test_0001_showing a project
+-------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:42:32 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 108ms (Views: 92.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:44:17', '2014-05-13 00:44:17', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:44:17', '2014-05-13 00:44:17', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:44:17', '2014-05-13 00:44:17', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:44:17', '2014-05-13 00:44:17', 888177411)[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------
+As a visitor when I click on the project I want to only show that project Feature Test: test_0001_showing a project
+-------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:44:17 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 105ms (Views: 90.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:50:54', '2014-05-13 00:50:54', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:50:54', '2014-05-13 00:50:54', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:50:54', '2014-05-13 00:50:54', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:50:54', '2014-05-13 00:50:54', 888177411)[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------
+As a visitor when I click on the project I want to only show that project Feature Test: test_0001_showing a project
+-------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:50:54 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 109ms (Views: 93.0ms | ActiveRecord: 0.2ms)
+Started GET "/projects/703402084" for 127.0.0.1 at 2014-05-12 17:50:55 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"703402084"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 703402084]]
+  Rendered projects/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:51:34', '2014-05-13 00:51:34', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:51:34', '2014-05-13 00:51:34', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:51:34', '2014-05-13 00:51:34', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:51:34', '2014-05-13 00:51:34', 888177411)[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------
+As a visitor when I click on the project I want to only show that project Feature Test: test_0001_showing a project
+-------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:51:34 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 105ms (Views: 90.2ms | ActiveRecord: 0.2ms)
+Started GET "/projects/703402084" for 127.0.0.1 at 2014-05-12 17:51:34 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"703402084"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 703402084]]
+  Rendered projects/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 00:52:10', '2014-05-13 00:52:10', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 00:52:10', '2014-05-13 00:52:10', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 00:52:10', '2014-05-13 00:52:10', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 00:52:10', '2014-05-13 00:52:10', 888177411)[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------------------------------
+As a visitor when I click on the project I want to only show that project Feature Test: test_0001_showing a project
+-------------------------------------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 17:52:10 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 106ms (Views: 90.4ms | ActiveRecord: 0.2ms)
+Started GET "/projects/703402084" for 127.0.0.1 at 2014-05-12 17:52:11 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"703402084"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 703402084]]
+  Rendered projects/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (50.8ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 01:01:37', '2014-05-13 01:01:37', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 01:01:37', '2014-05-13 01:01:37', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 01:01:37', '2014-05-13 01:01:37', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 01:01:37', '2014-05-13 01:01:37', 888177411)[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+As a visitor I want to delete an existing post Feature Test: test_0001_deleting a project
+-----------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 18:01:37 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 394ms (Views: 377.6ms | ActiveRecord: 0.3ms)
+Started DELETE "/projects/703402084" for 127.0.0.1 at 2014-05-12 18:01:37 -0700
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (39.6ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (39.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 01:03:02', '2014-05-13 01:03:02', 822229645)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 01:03:02', '2014-05-13 01:03:02', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 01:03:02', '2014-05-13 01:03:02', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 01:03:02', '2014-05-13 01:03:02', 888177411)[0m
+  [1m[35m (11.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+As a visitor I want to delete an existing post Feature Test: test_0001_deleting a project
+-----------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 18:03:02 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (42.1ms)
+Completed 200 OK in 639ms (Views: 601.6ms | ActiveRecord: 0.3ms)
+Started DELETE "/projects/703402084" for 127.0.0.1 at 2014-05-12 18:03:02 -0700
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"id"=>"703402084"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 703402084]]
+Completed 500 Internal Server Error in 37ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (10.5ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (6.7ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 01:06:17', '2014-05-13 01:06:17', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 01:06:17', '2014-05-13 01:06:17', 393743796)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 01:06:17', '2014-05-13 01:06:17', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 01:06:17', '2014-05-13 01:06:17', 888177411)[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+As a visitor I want to delete an existing post Feature Test: test_0001_deleting a project
+-----------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 18:06:17 -0700
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 01:06:47', '2014-05-13 01:06:47', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 01:06:47', '2014-05-13 01:06:47', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 01:06:47', '2014-05-13 01:06:47', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 01:06:47', '2014-05-13 01:06:47', 888177411)[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+As a visitor I want to delete an existing post Feature Test: test_0001_deleting a project
+-----------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 18:06:47 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 385ms (Views: 345.6ms | ActiveRecord: 0.2ms)
+Started DELETE "/projects/703402084" for 127.0.0.1 at 2014-05-12 18:06:48 -0700
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"id"=>"703402084"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 703402084]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 703402084]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/posts
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+Started GET "/posts" for 127.0.0.1 at 2014-05-12 18:06:48 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (40.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 01:07:29', '2014-05-13 01:07:29', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 01:07:29', '2014-05-13 01:07:29', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 01:07:29', '2014-05-13 01:07:29', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 01:07:29', '2014-05-13 01:07:29', 888177411)[0m
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+As a visitor I want to delete an existing post Feature Test: test_0001_deleting a project
+-----------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 18:07:29 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 109ms (Views: 93.0ms | ActiveRecord: 0.3ms)
+Started DELETE "/projects/703402084" for 127.0.0.1 at 2014-05-12 18:07:30 -0700
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"id"=>"703402084"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 703402084]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 703402084]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/projects
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 18:07:30 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (22.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('My first Post', 'This is my first post about how I learn web development', '2014-05-13 01:08:15', '2014-05-13 01:08:15', 822229645)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at", "id") VALUES ('Intro to HTTP', 'It''s all about the request response cycle', '2014-05-13 01:08:15', '2014-05-13 01:08:15', 393743796)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Code Fellows Portfolio', 'Ruby, Rails, Zurb', '2014-05-13 01:08:15', '2014-05-13 01:08:15', 703402084)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "projects" ("name", "technologies_used", "created_at", "updated_at", "id") VALUES ('Kevin', 'Java', '2014-05-13 01:08:15', '2014-05-13 01:08:15', 888177411)[0m
+  [1m[35m (18.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------------------
+As a visitor I want to delete an existing post Feature Test: test_0001_deleting a project
+-----------------------------------------------------------------------------------------
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 18:08:15 -0700
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 94ms (Views: 79.0ms | ActiveRecord: 0.2ms)
+Started DELETE "/projects/703402084" for 127.0.0.1 at 2014-05-12 18:08:15 -0700
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"id"=>"703402084"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 703402084]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 703402084]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/projects
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+Started GET "/projects" for 127.0.0.1 at 2014-05-12 18:08:15 -0700
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (5.0ms)[0m  rollback transaction
