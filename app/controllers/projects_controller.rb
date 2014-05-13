@@ -7,18 +7,33 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
+ before_action :set_project, only: [:show, :edit, :update]
+
+  def edit
+
+  end
+
   def create
     @project = Project.new(project_params)
     if @project.save
       flash[:notice] = "Project has been created."
       redirect_to @project
     else
-      # we'll get to this later
+      flash.now[:error] = "Project could not be saved."
+      render :new
     end
   end
 
   def show
-    @project = Project.find(params[:id])
+
+  end
+
+  def update
+    if @project.update_attributes(project_params)
+      redirect_to @project, notice: 'Project was Successfully updated.'
+    else
+      render :edit
+    end
   end
 
 private
@@ -26,4 +41,7 @@ private
 def project_params
   params.require(:project).permit(:name, :technologies_used)
   end
+end
+def set_project
+  @project = Project.find(params[:id])
 end
