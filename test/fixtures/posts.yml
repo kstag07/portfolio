@@ -1,8 +1,8 @@
 cr:
   title: My first Post
   body: This is my first post about how I learn web development
-
+  author: one
 http:
   title: Intro to HTTP
   body: It's all about the request response cycle
-
+  author: one

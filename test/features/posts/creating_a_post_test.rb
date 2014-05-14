@@ -3,6 +3,7 @@ require "test_helper"
 feature "Creating A Post" do
   scenario "submit form to create a new post" do
     #Given a completed new post form
+    sign_in
     visit new_post_path
     fill_in "Title", with: posts(:cr).title
     fill_in "Body", with:  posts(:cr).body
@@ -11,5 +12,7 @@ feature "Creating A Post" do
     #Then a new post should created an displayed
     page.text.must_include "Post was successfully created"
     page.text.must_include posts(:cr).title
+     page.has_css? "#author"
+    page.text.must_include users(:King).email
   end
 end

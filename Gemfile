@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby "2.1.1"
 gem 'rake'
 gem 'minitest-rails'
+gem 'devise'
 
 group :test do
   gem "minitest-rails-capybara"
