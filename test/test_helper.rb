@@ -11,6 +11,13 @@ require "minitest/rails"
 # Uncomment for awesome colorful output
 # require "minitest/pride"
 
+def sign_in
+visit new_user_session_path
+    fill_in "Email", with: users(:King).email
+    fill_in "Password", with: "password"
+    click_button "Sign in"
+  end
+
 class ActiveSupport::TestCase
     ActiveRecord::Migration.check_pending!
 

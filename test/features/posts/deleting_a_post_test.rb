@@ -2,6 +2,7 @@ require "test_helper"
 
 feature "Deleting A Post" do
   scenario "post is deleted with a click" do
+    sign_in
     #Given an existing post
     post = posts(:cr).title, posts(:cr).body
     visit posts_path
