@@ -4,6 +4,8 @@ gem 'rake'
 gem 'minitest-rails'
 gem 'devise'
 gem 'pundit'
+gem 'paperclip', '~> 4.1'
+gem 'omniauth-twitter'
 
 group :test do
   gem "minitest-rails-capybara"
@@ -38,6 +40,7 @@ group :development do
  gem 'rails_layout'
  gem 'spring'
  gem 'sqlite3'
+ gem 'figaro'
 end
 
 # Use ActiveModel has_secure_password

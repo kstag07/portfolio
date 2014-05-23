@@ -1,0 +1,36 @@
+
+<%= form_for([@post, @comment]) do |f| %>
+  <% if @comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% @comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+    <%= f.hidden_field :post_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+    <%= f.hidden_field :post_id %>
+  </div>
+<% if PostPolicy.new(current_user, @post).create? %>
+  <div class="field">
+      <%= f.label :approved %>
+      <%= f.check_box :approved %>
+    </div>
+<% end %>
+  <div class="action">
+    <%= f.submit "Submit to be Approved" %>
+  </div>
+    <% end %>

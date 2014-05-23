@@ -1,0 +1,9 @@
+opinion:
+  author: "Emily"
+  content: Blargh
+  approved: true
+
+fact:
+  author: "Jane"
+  content: I agree
+  approved: false

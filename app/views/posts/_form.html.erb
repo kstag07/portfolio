@@ -19,6 +19,7 @@
     <%= f.label :body %><br>
     <%= f.text_area :body %>
   </div>
+
  <% if PostPolicy.new(current_user, @post).publish? %>
     <div class="row collapse">
       <div class="small-3 columns">
@@ -30,7 +31,9 @@
       </div>
     </div>
   <% end %>
+
   <div class="action">
     <%= f.submit %>
   </div>
 <% end %>
+

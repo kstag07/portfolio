@@ -11,6 +11,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @comment = @post.comments.build
+    #@comments = policy_scope(Comment)
   end
 
   # GET /posts/new
@@ -72,6 +74,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body, (:published if PostPolicy.new(current_user, @post).publish?))
+      params.require(:post).permit(:comment, :title, :body, (:published if PostPolicy.new(current_user, @post).publish?))
     end
 end

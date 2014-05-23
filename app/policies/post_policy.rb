@@ -9,6 +9,8 @@ class PostPolicy < Struct.new(:user, :post)
     @user.present? && @user.editor?
   end
 
+
+
   def create?
     @user.present? && (@user.author? || @user.editor?)
   end

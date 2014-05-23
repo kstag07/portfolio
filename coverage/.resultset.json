@@ -1,7 +1,13 @@
 {
   "Unknown Test Framework": {
     "coverage": {
+      "/Users/m/portfolio/app/models/comment.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/m/portfolio/app/models/post.rb": [
+        1,
         1,
         1,
         null,
@@ -17,8 +23,33 @@
         1,
         1,
         null
+      ],
+      "/Users/m/portfolio/app/controllers/omniauth_callbacks_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/m/portfolio/app/controllers/application_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1400278927
+    "timestamp": 1400822761
   }
 }

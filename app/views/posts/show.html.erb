@@ -20,5 +20,27 @@
   <%= @post.published? ? "Published" : "Unpublished" %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<p id="comments">
+<%= render 'comments/form' %>
+</p>
+
+<table>
+  <tbody>
+    <% policy_scope(@post.comments).each do |comment| %>
+      <tr>
+        <% if !comment.new_record? %>
+          <td>Author: <%= comment.author %>
+          <td>Content:  <%= comment.content %></td>
+          <td>Status: <%= comment.approved? ? "Approved" : "Not Approved" %></td>
+          <% if current_user.editor? || current_user.author? %>
+          <td><%= link_to 'Edit', edit_post_comment_path(@post, comment) %></td>
+          <td><%= link_to 'Delete', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+          <% end %>
+        <% end %>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_post_path(@post) %>
 <%= link_to 'Back', posts_path %>
