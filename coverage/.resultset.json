@@ -23,33 +23,8 @@
         1,
         1,
         null
-      ],
-      "/Users/m/portfolio/app/controllers/omniauth_callbacks_controller.rb": [
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/Users/m/portfolio/app/controllers/application_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null
       ]
     },
-    "timestamp": 1400822761
+    "timestamp": 1400874264
   }
 }
