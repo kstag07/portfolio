@@ -1,0 +1,11 @@
+<h1> Comments </h1>
+
+<div id="comments">
+<%= @comments.each do |comment| %>
+  <div class="comment" >
+    <%= simple_format comment.content %>
+  </div>
+<% end %>
+</div>
+
+<%= link_to "new comment", [:new, @commentable, :comment] %>

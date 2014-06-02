@@ -14,14 +14,14 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-05-23T17:37:11-07:00">2014-05-23T17:37:11-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-06-02T16:40:21-07:00">2014-06-02T16:40:21-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">81.82%</span></span>
+    (<span class="covered_percent"><span class="yellow">83.33%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>3</b> files in total.
-    <b>11</b> relevant lines. 
-    <span class="green"><b>9</b> lines covered</span> and
+    <b>12</b> relevant lines. 
+    <span class="green"><b>10</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -73,9 +73,9 @@
       <tr>
         <td class="strong"><a href="#aa0e81c6ce379e7df6b3a49527dee52cddec630f" class="src_link" title="app/models/project.rb">app/models/project.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>5</td>
         <td>4</td>
-        <td>3</td>
-        <td>3</td>
+        <td>4</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -126,7 +126,7 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="yellow">81.82%</span></span>
+    (<span class="covered_percent"><span class="yellow">83.33%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -137,8 +137,8 @@
   <a name="Models"></a>
   <div>
     <b>3</b> files in total.
-    <b>11</b> relevant lines. 
-    <span class="green"><b>9</b> lines covered</span> and
+    <b>12</b> relevant lines. 
+    <span class="green"><b>10</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -178,9 +178,9 @@
       <tr>
         <td class="strong"><a href="#aa0e81c6ce379e7df6b3a49527dee52cddec630f" class="src_link" title="app/models/project.rb">app/models/project.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>5</td>
         <td>4</td>
-        <td>3</td>
-        <td>3</td>
+        <td>4</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -371,7 +371,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  belongs_to :post</code>
+          <code class="ruby">  belongs_to :commentable, polymorphic: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
@@ -413,7 +413,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">has_many :comments</code>
+          <code class="ruby">has_many :comments, as: :commentable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -467,8 +467,8 @@
     <h3>app/models/project.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -485,16 +485,22 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :technologies_used, presence: true</code>
+          <code class="ruby">  has_many :comments, as: :commentable</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
+          <code class="ruby">  validates :technologies_used, presence: true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
           <code class="ruby">  validates :name, length: {in: 4..255}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">end</code>
