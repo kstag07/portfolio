@@ -6,7 +6,7 @@ feature "Comment features on blog posts" do
     page.find("tbody tr:last").click_on "Show"
     fill_in "Content", with: "Great Comment"
     click_button "Submit to be Approved"
-    page.text.must_include "submitted"
+    page.text.must_include "Comment created."
     page.text.wont_include "Great Comment"
   end
 

@@ -32,7 +32,7 @@
           <td>Author: <%= comment.author %>
           <td>Content:  <%= comment.content %></td>
           <td>Status: <%= comment.approved? ? "Approved" : "Not Approved" %></td>
-          <% if current_user.editor? || current_user.author? %>
+          <% if current_user.present? && (current_user.editor? || current_user.author?) %>
           <td><%= link_to 'Edit', edit_post_comment_path(@post, comment) %></td>
           <td><%= link_to 'Delete', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Are you sure?' } %> </td>
           <% end %>
