@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = PostPolicy::Scope.new(current_user, Post).resolve
   end
 
   # GET /posts/1
@@ -72,6 +72,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title, :body, (:published if PostPolicy.new(current_user, @post).publish?))
     end
 end

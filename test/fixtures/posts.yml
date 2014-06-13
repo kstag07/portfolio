@@ -1,8 +1,17 @@
 cr:
   title: My first Post
   body: This is my first post about how I learn web development
-  author: one
+  author: author
+  published: true
+
 http:
   title: Intro to HTTP
   body: It's all about the request response cycle
-  author: one
+  author: King
+  published: true
+
+manifest:
+  title: yeayea
+  body: what it is
+  author: editor
+  published: false

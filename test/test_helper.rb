@@ -3,6 +3,8 @@ require File.expand_path("../../config/environment", __FILE__)
 require "rails/test_help"
 require "minitest/rails/capybara"
 require "minitest/rails"
+require "simplecov"
+SimpleCov.start 'rails'
 
 # To add Capybara feature tests add `gem "minitest-rails-capybara"`
 # to the test group in the Gemfile and uncomment the following:
@@ -11,9 +13,9 @@ require "minitest/rails"
 # Uncomment for awesome colorful output
 # require "minitest/pride"
 
-def sign_in
+def sign_in(role = :editor)
 visit new_user_session_path
-    fill_in "Email", with: users(:King).email
+    fill_in "Email", with: users(role).email
     fill_in "Password", with: "password"
     click_button "Sign in"
   end

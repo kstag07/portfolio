@@ -8,8 +8,17 @@
 King:
   email: "kstag07@yahoo.com"
   encrypted_password: <%= User.new.send(:password_digest, 'password') %>
-#column: value
+
 Kong:
   email: "ksklAS@BLAH.com"
   encrypted_password: <%= User.new.send(:password_digest, 'blahblah') %>
 
+editor:
+  email: barney@getit.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  role: editor
+
+author:
+  email: kevin@thisishowwedo.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  role: author
