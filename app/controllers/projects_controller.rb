@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
   @project.destroy
     respond_to do |format|
       format.html { redirect_to projects_url, notice: 'Post was successfully destroyed.' }
+      format.js {}
     end
  end
 
@@ -21,13 +22,20 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(project_params)
-    if @project.save
-      flash[:notice] = "Project has been created."
-      redirect_to @project
-    else
-      flash.now[:error] = "Project could not be saved."
-      render :new
+      @project = Project.new(project_params)
+      respond_to do |format|
+        format.html do
+          if @project.save
+            flash[:notice] = "Project has been created."
+            redirect_to projects_path
+          else
+            flash.now[:error] = "Project could not be saved."
+            render :new
+        end
+      end
+      format.js do |format|
+        @project.save
+      end
     end
   end
 
@@ -36,11 +44,13 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    if @project.update_attributes(project_params)
-      redirect_to @project, notice: 'Project was Successfully updated.'
-    else
-      render :edit
-    end
+    @project.update_attributes(project_params)
+    respond_to do |format|
+        format.html do
+          redirect_to @project, notice: 'Project was Successfully updated.'
+        end
+      format.js {}
+   end
   end
 
 private

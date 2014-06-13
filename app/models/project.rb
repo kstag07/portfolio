@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
   has_many :comments, as: :commentable
   validates :technologies_used, presence: true
-  validates :name, length: {in: 4..255}
+  validates :name, length: {in: 4..255}, uniqueness: true
 
   has_attached_file :image, styles: {
     thumb: '100x100>',
