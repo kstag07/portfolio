@@ -2,8 +2,19 @@ opinion:
   author: "Emily"
   content: Blargh
   approved: true
+  commentable: cr (Post)
 
 fact:
   author: "Jane"
   content: I agree
   approved: false
+  commentable: new_project (Project)
+
+act:
+  author: "Jane"
+  content: I agree
+  approved: true
+  commentable: portfolio (Project)
+
+
+

@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :projects
+  resources :projects do
+    resources :comments
+  end
 
   get 'posts/:id', to: 'post#show'
 

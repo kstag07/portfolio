@@ -24,7 +24,6 @@ feature "As a user I want to be able to sign in if I have an existing account" d
                             info: { nickname: 'test_twitter_user'},
                             })
    first(:link,"Sign in with Twitter").click
-   save_and_open_page
    page.must_have_content "test_twitter_user, you are signed in!"
   end
 end
