@@ -63,13 +63,12 @@
             <li class="divider"></li>
             <li><a href="#features">Resume</a></li>
             <li class="divider"></li>
-            <li><a href="#work">Projects</a></li>
+            <li><%= link_to "Projects", projects_path %></li>
             <li class="divider"></li>
             <li><a href="https://github.com/kstag07">Github</a></li>
             <li class="divider"></li>
             <li><a href="#contact">Contact</a></li>
-            <li class="divider"></li>
-            <li><a href="#github">Github</a></li>
+
           </ul> <!-- /.right -->
 
         </section> <!-- /.top-bar-section -->
@@ -96,7 +95,7 @@
           <p class="lead">Seattle area web developer.  University of Washingtion graduate in Physics and currently a student at Code Fellows</p>
 
           <!-- Anchor Button -->
-          <p><a class="button alert radius" href="#about">Take a tour</a></p>
+          <p><a class="button alert radius" href="#about">Introduction</a></p>
 
         </div> <!-- /.medium-8 .medium-centered .columns -->
 
@@ -950,6 +949,7 @@
           <h2>Contact us now!</h2>
           <div class="line"></div>
 
+
         </div> <!-- /.medium-8 .medium-centered .columns -->
 
       </div> <!-- /.row -->
@@ -957,8 +957,27 @@
 
       <div class="row">
 
+ <%= form_for(@contact) do |f| %>
+ <div class="field">
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
+      </div>
+ <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+      </div>
+         <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+      </div>
+    <div class="action">
+    <%= f.submit "Submit to be Approved" %>
+  </div>
+        <% end %>
+
         <!-- Contact Form -->
         <div class="medium-6 columns">
+
 
           <form data-abide>
 
@@ -985,9 +1004,9 @@
 
                 <div class="medium-12 columns">
 
-                  <div class="email-field">
-                    <label>Email
-                      <input class="radius" id="myEmail" type="email" placeholder="support@cosmogony.com">
+                  <div class="text-field">
+                    <label>text
+                      <input class="radius" id="myEmail" type="email">
                     </label>
                     <small class="error">An email address is required.</small>
                   </div> <!-- /.email-field -->
