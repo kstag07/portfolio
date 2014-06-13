@@ -1,7 +1,13 @@
 {
   "Unknown Test Framework": {
     "coverage": {
+      "/Users/m/portfolio/app/models/comment.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/m/portfolio/app/models/post.rb": [
+        1,
         1,
         1,
         null,
@@ -19,6 +25,6 @@
         null
       ]
     },
-    "timestamp": 1400278927
+    "timestamp": 1400891831
   }
 }
